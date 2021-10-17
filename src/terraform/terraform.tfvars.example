@@ -1,0 +1,5 @@
+project         = "myproject"
+network_name    = "my-test-vpc"
+subnet_region   = "europe-west4"
+zone            = "europe-west4-b"
+whitelisted_ips = ["my-ip", "sensor01", "sensor02"]
