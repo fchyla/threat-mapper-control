@@ -25,9 +25,7 @@ if [[ ! -f "$COMPOSE_FILE" || $(curl -s "$COMPOSE_FILE_URL" | sha256sum | cut -d
 then
 
  curl -s -o "$COMPOSE_FILE" "$COMPOSE_FILE_URL" 
- # fix for router not restarting
- sed -i '/container_name: deepfence-router.*/a \ \ \ \ environment:\n\ \ \ \ \ \ OPERATING_MODE: "docker"' "$COMPOSE_FILE"
-
+ 
 fi
 
 
